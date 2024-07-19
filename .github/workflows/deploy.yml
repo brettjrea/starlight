@@ -27,7 +27,7 @@ jobs:
           sed -i "s|base: 'astro'|base: '${{ secrets.BASE }}'|" astro.config.mjs
 
       - name: Verify updated config
-        run: cat astro.config.js
+        run: cat astro.config.mjs
 
       - name: Install, build, and upload your site
         uses: withastro/action@v2
