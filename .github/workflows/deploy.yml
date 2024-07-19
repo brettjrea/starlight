@@ -24,8 +24,8 @@ jobs:
 
       - name: Override placeholders in astro.config.mjs
         run: |
-          sed -i "s|https://USERNAME_000.github.io|https://${{ vars.USERNAME }}.github.io|g" astro.config.mjs
-          sed -i "s|BASE_000|${{ vars.BASE }}|g" astro.config.mjs
+          sed -i "s|https://USERNAME_000.github.io|https://${{ vars.USERNAME_000 }}.github.io|g" astro.config.mjs
+          sed -i "s|BASE_000|${{ vars.BASE_000 }}|g" astro.config.mjs
 
       - name: Verify updated config
         run: cat astro.config.mjs
