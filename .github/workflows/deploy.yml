@@ -23,8 +23,8 @@ jobs:
 
       - name: Override site and base in astro.config.js
         run: |
-          sed -i "/site: /s|https://.*\.github\.io|https://${{ secrets.USERNAME }}.github.io|" astro.config.js
-          sed -i "s|base: 'astro'|base: '${{ secrets.BASE }}'|" astro.config.js
+          sed -i "/site: /s|https://.*\.github\.io|https://${{ secrets.USERNAME }}.github.io|" astro.config.mjs
+          sed -i "s|base: 'astro'|base: '${{ secrets.BASE }}'|" astro.config.mjs
 
       - name: Install, build, and upload your site
         uses: withastro/action@v2
