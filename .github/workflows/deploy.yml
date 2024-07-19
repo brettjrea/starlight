@@ -23,7 +23,7 @@ jobs:
 
       - name: Override site and base in astro.config.js
         run: |
-          sed -i "s|brettjrea|${{ secrets.USERNAME }}|g" astro.config.js
+          sed -i "s|example|${{ secrets.USERNAME }}|g" astro.config.js
           sed -i "s|base: 'astro'|base: '${{ secrets.BASE }}'|" astro.config.js
 
       - name: Install, build, and upload your site
